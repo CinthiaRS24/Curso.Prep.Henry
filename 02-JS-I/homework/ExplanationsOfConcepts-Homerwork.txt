@@ -1,0 +1,32 @@
+En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
+
+Variables: Son creadas para almacenar el valor de algo. Algo que utilizarás, y por eso, antes de usarlo debes almacenar su valor. Y se define con la palabra "var". Por ejemplo, quiro asignar que el valor de x es 5:
+	var x = 5
+
+Strings: Es una cadena de caracteres, es un texto, un texto que puede estar formado por letras y números. Por ejemplo:
+	'Hola', 'ab12c', etc
+
+Funciones (argumentos, return): Las funciones se crean para no repetir código, sirve para automatizar ciertas operaciones. Las funciones tienen 3 partes: el nombre de la función, los parámetros, y el cuerpo de la función.
+	function Sum(a,b) {
+		return a + b;
+	} 
+ En el ejemplo anterior, "Sum" sería el nombre de la función, "a y b" serían los parámetros, "return a + b" sería el cuerpo de la función.
+
+Los argumentos son los valores que se dan en reemplazo de los parámetros, para que la función ocurra.
+Por ejemplo, si colocamos:
+	Sum (5,8); eso me dará como resultado 13, ya que cumple lo que la función ordena, en este caso, que se devuelva la suma de a + b, osea 5 + 8.
+El número 5 y 8 serían los argumentos, que están reemplazando a "a y b".
+
+Return se utiliza cuando queramos devolver algo, podemos devolver el producto de una operación matemática o un texto. En el ejemplo anterior, nos devuelve la suma de a y b.
+
+Declaraciones if, son como la condicional del si... entonces .... Se utilizan dentro del cuerpo de una función, para establecer que cumpla con algo y luego ocurra algo.
+	function Show(a) {
+		if (a > 8) {
+			return true;
+		} else {
+			return false;
+		}
+	} 
+En el ejemplo anterior, el if sirve para verificar que algo se cumpla, en este caso, que el argumento que se le da sea mayor a 8, de ser así se devolverá la palabra "true", y de lo contrario la palabra "false".
+
+Valores booleanos (true, false): Es un tipo de dato, que puede ser true o false. En el ejemplo anterior, lo que se está devolviendo de aplicar la función Show, es un valor booleano
