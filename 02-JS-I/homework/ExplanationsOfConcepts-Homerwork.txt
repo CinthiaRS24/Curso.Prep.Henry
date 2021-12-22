@@ -29,4 +29,4 @@ Declaraciones if, son como la condicional del si... entonces .... Se utilizan de
 	} 
 En el ejemplo anterior, el if sirve para verificar que algo se cumpla, en este caso, que el argumento que se le da sea mayor a 8, de ser así se devolverá la palabra "true", y de lo contrario la palabra "false".
 
-Valores booleanos (true, false): Es un tipo de dato, que puede ser true o false. En el ejemplo anterior, lo que se está devolviendo de aplicar la función Show, es un valor booleano
+Valores booleanos (true, false): Es un tipo de dato, que puede ser true o false. En el ejemplo anterior, lo que se está devolviendo de aplicar la función Show, es un valor booleano.
