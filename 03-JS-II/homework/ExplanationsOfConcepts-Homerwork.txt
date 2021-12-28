@@ -1,0 +1,21 @@
+En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
+
+for: Es un bucle que evalúa expresiones una y otra vez, hasta que deveulve lo que estamos buscando. El bucle for tiene la siguiente sintaxis:
+	for (var i = 0; i < 10; i++) {
+		console.log(i);
+	}
+	Dentro del paréntesis encontramos 3 partes: Primero declaramos una variable, luego tenemos la expresión condicional y finalmente de cuánto irá incrementando la variable. Mientras se cumpla la condición, se ejecutará lo que está dentro de las llaves.
+
+&&: Es un operador lógico denominado "Y", que va a evaluar las condiciones que estén unidas con ese mismo (&&). Por ejemplo:
+	if (numero >= 5 && numero < 100) {
+		return "Está dentro del rango";
+	}
+	En el ejemplo anterior, vemos dos condiciones unidas con el operador lógico &&, por lo que tendrán que cumplirse ambas condiciones; es decir ambas condiciones tienen que ser verdaderas, para que se ejecute el código que sigue.
+
+||: Es un operador lógico denominado "O", que va a evaluar las condiciones que estén unidas con ese mismo (||). Por ejemplo:
+	if (numero >= 5 || numero < 100) {
+		return "Está dentro del rango";
+	}
+	En el ejemplo anterior, vemos dos condiciones unidas con el operador lógico ||, por lo que basta con que una condición se cumpla; es decir basta con que una condición sea verdadera, para que se ejecute el código que sigue.
+!: Es un operador lógico denominado "NO", que va a devolver el valor booleano opuesto al que se le pasa. Por ejemplo:
+	!True, será false.

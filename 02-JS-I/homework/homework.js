@@ -123,11 +123,13 @@ function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-   if (num % 2 > 0) {
+  /* if (num % 2 > 0) {
     return true;
   } else {
     return false;
-  }
+  }*/
+
+  return num % 2 > 0;
 }
 
 function elevarAlCuadrado(num) {
@@ -230,20 +232,20 @@ function deEuroAdolar(euro){
   return euro * 1.20;
 }
 
-
-function esVocal(letra){
+const vowels = ['a', 'e', 'i', 'o', 'u'];
+function esVocal(letra) {
   //Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”. 
   //Verificar si el usuario ingresó un string de más de un carácter, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  if (letra.length = 1) {
-    if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {
-     return "Es vocal"; 
-    } else {
-      return "Dato incorrecto";
+  
+  if (letra.length === 1 && vowels.includes(letra)) {
+    return "Es vocal"; 
+  } else {
+    return "Dato incorrecto";
   }
-}
+  
 }
 
 
