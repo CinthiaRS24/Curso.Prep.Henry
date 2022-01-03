@@ -1,0 +1,24 @@
+En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
+
+Objetos: Puede contener mucha información sobre una sola cosa. Inician y finalizan con llaves ({}).
+
+Propiedades: Es el contenido de los objetos.
+
+Métodos: Es una propiedad del objeto, pero que es específicamente una función.
+
+Bucle for…in: Lo utilizamos cuando queremos iterar sobre cada par clave-valor en nuestro objeto.
+
+Notación de puntos vs notación de corchetes: Tienen casi la misma función, sirve para ingresar a las diversas propiedades de un objeto. Sin embargo, en algunos casos es mejor utilizar notación de corchetes en vez de notación de puntos. Por ejemplo:
+
+var usuario = {
+	nombre: "Juan",
+	edad: 26,
+};
+
+var x = "edad"
+
+Si yo coloco:
+console.log(usuario[x])   imprimirá 26
+
+pero si coloco:
+console.log(usuario.x)    imprimirá undefined
