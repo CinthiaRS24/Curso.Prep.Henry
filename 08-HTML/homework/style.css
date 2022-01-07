@@ -1,20 +1,32 @@
 h1{
 	color: red;
+	display: block;
+	text-align: center;
 }	
+
 
 img{
 	width: 400px;
+	margin: auto;
 }
 
 #thirdDiv{
 	height: 600px;
-	width: 500pc;
+	width: 500px;
 	background-color: yellow;
 	padding: 50px;
 	border: 5px blue solid;
+	margin: auto;
 }
 
 #spanId{
 	font-size: 18px;
-	margin: 50px;
+	text-align: center;
+}
+
+
+
+body{
+	background-image: url("https://image.freepik.com/vector-gratis/fondo-invierno-hojas-pinceles-color-pastel_220290-42.jpg");
+	text-align: center;
 }

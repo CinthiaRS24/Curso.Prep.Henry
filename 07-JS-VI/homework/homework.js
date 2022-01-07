@@ -73,16 +73,32 @@ function filter(array) {
   return y;
 }
 
+
+
+ 
  /*
-  var y = {}
+  var x = array.map(function(elemento) {
+    if (elemento.charAt(0) === "a") {
+      return elemento;
+    }
+  });
+ 
+}
+*/
+
+/*
+  var y = []
   var x = array.map(function(elemento) {
     if (elemento.charAt(0) === "a") {
       y.push(elemento);
     }
   });
-  return y;
+  
+ return y;
 }
 */
+
+
 
 // No modificar nada debajo de esta línea
 // --------------------------------
