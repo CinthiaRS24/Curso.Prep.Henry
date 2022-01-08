@@ -10,7 +10,30 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+  var x = Object.entries(objeto);
+
+  return x;
 }
+
+/*
+let nuevaMatriz = [];
+let claves=Object.keys(objeto);
+  for(let i = 0; i<claves.length;i++){
+    nuevaMatriz.push([claves[i], objeto[claves[i]]]);
+  }
+  return nuevaMatriz;
+*/
+
+/*
+var x = [];
+for (clave in objeto) {
+  x.push([clave, objeto[clave]])
+
+}
+
+retur x;
+}
+*/
 
 
 function numberOfCharacters(string) {
@@ -18,7 +41,41 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+  var x = {};
+
+  for (var i = 0; i < string.length; i++) {
+
+    if (Object.keys(x).includes(string[i])) {
+
+      x[string[i]] = x[string[i]] + 1
+
+      } else {
+
+        x[string[i]] = 1;
+      }
+  }
+
+  return x;
 }
+
+
+
+/*
+  (objeto[string.charAt(i)]) {
+        objeto[string.charAt(i)] = 1
+      } else {
+        objeto[string.charAt(i)] = objeto[string.charAt(i)] + 1 ;
+      }
+    }
+
+/*
+  var objeto = {};
+  for(var i=0; i < string.length; i++){
+        objeto[string[i]] = ( objeto[string[i]] || 0 ) + 1;
+    }
+    return objeto;
+}
+*/
 
 
 function capToFront(s) {
@@ -26,6 +83,25 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+
+  var mayuscula = [];
+  var minuscula = [];
+  var y = s.toUpperCase();
+  var z = s.toLowerCase();
+
+  for (var i = 0; i < s.length; i++) {
+    if (s.charAt(i) === y.charAt(i)) {
+      mayuscula.push(s.charAt(i));
+    }
+  }
+
+  for (var i = 0; i < s.length; i++) {
+    if (s.charAt(i) === z.charAt(i)) {
+      minuscula.push(s.charAt(i));
+    }
+  }
+
+  return mayuscula.join("") + minuscula.join("");
 }
 
 
@@ -35,6 +111,14 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  var x = str.split(" ");
+  var y = [];
+
+  for (var i = 0; i < x.length; i++) {
+    y.push(x[i].split("").reverse().join(""));
+  }
+
+  return y.join(" ");
 } 
 
 
@@ -43,6 +127,14 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
+  var x = numero.toString().split("").reverse().join("");
+  var y = numero.toString();
+
+  if (x === y) {
+    return "Es capicua";
+  } else {
+    return "No es capicua";
+  }
 }
 
 
@@ -50,6 +142,16 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+
+  var x = [];
+
+  for (var i = 0; i < cadena.length; i++) {
+    if (cadena.charAt(i) !== "a" && cadena.charAt(i) !== "b" && cadena.charAt(i) !== "c") {
+      x.push(cadena.charAt(i));
+    }
+  }
+
+  return x.join("");
 }
 
 
@@ -57,15 +159,33 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
+  
+  
+  arr.sort(function(a, b) {
+    return a.length - b.length;
+  })
+  return arr;
 }
 
 
-function buscoInterseccion(arreglo1, arreglo2){
+function buscoInterseccion(arreglo1, arreglo2) {
   //Existen dos arrays, cada uno con 5 números. A partir de ello, escribir una función que permita 
   //retornar un nuevo array con la intersección de ambos elementos. (Ej: [4,2,3] unión [1,3,4] = [3,4].
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí  
+  var x = [];
+
+  for (var i = 0; i < arreglo1.length; i++) {
+     
+     for (var j = 0; j < arreglo2.length; j++) {
+       if (arreglo1[i] === arreglo2[j]) {
+          x.push(arreglo1[i]);
+       }
+     }
+  }
+
+  return x;
 }
 
 
@@ -83,4 +203,3 @@ module.exports = {
    sortArray,
    buscoInterseccion,
 };
-
